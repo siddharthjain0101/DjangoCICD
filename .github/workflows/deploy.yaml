@@ -1,0 +1,20 @@
+name: Deploy to Main
+
+on:
+  push:
+    branches:
+      - development
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Push changes to main
+        if: github.ref == 'refs/heads/development'  # Only run if changes are pushed to the development branch
+        uses: ad-m/github-push-action@master
+        with:
+          branch: main
