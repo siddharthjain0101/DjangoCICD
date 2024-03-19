@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-x)1gv)58!l8&wf7n&kzk=j5ov!6ivq%ct9%7-5winkjnpd1avw
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'training_db',
         'USER': 'postgres',
         'PASSWORD': 'root',
-        'HOST': 'localhost',  # or the hostname where your PostgreSQL server is running
+        'HOST': 'dbpg',  # or the hostname where your PostgreSQL server is running
         'PORT': '5432',       # the default PostgreSQL port
     }
 }
