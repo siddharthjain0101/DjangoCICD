@@ -2,8 +2,7 @@ name: Deploy to Main
 
 on:
   push:
-    branches:
-      - development
+    branches: [ development ]
 
 jobs:
   deploy:
@@ -16,4 +15,5 @@ jobs:
       - name: Push changes to main
         uses: ad-m/github-push-action@master
         with:
+          github_token: ${{ secrets.PAT_TOKEN }}
           branch: main
